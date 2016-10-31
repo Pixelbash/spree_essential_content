@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'spree', github: 'spree/spree', branch: '3-1-stable'
-gem 'ckeditor'
+gem 'ckeditor', github: 'galetahub/ckeditor'
 
 group :development do
   gem 'cucumber-rails', :require => false
