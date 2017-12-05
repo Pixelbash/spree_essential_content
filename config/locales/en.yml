@@ -9,7 +9,9 @@ en:
     essential_content:
       blog:
         name: Blog Name
-        permalink: permalink
+        permalink: Permalink
+        meta_title: Meta Title
+        meta_description: Meta Description
       content:
         model_name: Content
         page_title: Page Title

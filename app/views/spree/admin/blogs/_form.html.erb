@@ -1,11 +1,30 @@
-<%= form.field_container :name do %>
-  <%= form.label :name, Spree.t("essential_content.blog.name") %><br />
-  <%= form.text_field :name, class: "text" %>
-  <%= error_message_on :blog, :name %>
-<% end %>
+<div class="row">
+  <div class="col-md-6">
+    <%= form.field_container :name, class: ['form-group'] do %>
+      <%= form.label :name, Spree.t("essential_content.blog.name") %><br />
+      <%= form.text_field :name, class: "form-control " %>
+      <%= error_message_on :blog, :name %>
+    <% end %>
+    
+    <%= form.field_container :meta_title, class: ['form-group'] do %>
+      <%= form.label :meta_title, Spree.t("essential_content.blog.meta_title") %><br />
+      <%= form.text_field :meta_title, class: "form-control " %>
+      <%= error_message_on :blog, :meta_title %>
+    <% end %>
+  </div>
 
-<%= form.field_container :permalink do %>
-  <%= form.label :permalink, Spree.t("essential_content.blog.permalink") %><br />
-  <%= form.text_field :permalink, class: "text" %>
-  <%= error_message_on :blog, :permalink %>
-<% end %>
+  <div class="col-md-6">
+
+    <%= form.field_container :permalink, class: ['form-group'] do %>
+      <%= form.label :permalink, Spree.t("essential_content.blog.permalink") %><br />
+      <%= form.text_field :permalink, class: "form-control " %>
+      <%= error_message_on :blog, :permalink %>
+    <% end %>
+
+    <%= form.field_container :meta_description, class: ['form-group'] do %>
+      <%= form.label :meta_description, Spree.t("essential_content.blog.meta_description") %><br />
+      <%= form.text_field :meta_description, class: "form-control " %>
+      <%= error_message_on :blog, :meta_description %>
+    <% end %>
+  </div>
+</div>

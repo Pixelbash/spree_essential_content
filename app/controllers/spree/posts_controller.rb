@@ -12,7 +12,8 @@ module Spree
       @posts_by_month = default_scope.web.limit(50).group_by { |post| post.posted_at.strftime("%B %Y") }
       scope = default_scope.web
       @breadcrumbs = [ [@blog.name, "/#{@blog.permalink}"] ]
-      @title = "#{@blog.name}"
+      @title = @blog.meta_title
+
       if params[:year].present?
         @title = "#{@title} for"
         @breadcrumbs << [params[:year], "/#{@blog.permalink}/#{params[:year].to_i}"]
@@ -38,6 +39,9 @@ module Spree
         scope = scope.where("posted_at >= ? AND posted_at <= ?", start, stop)
         @title = "#{@title} #{params[:year]}"
       end
+
+      @object = @blog
+
       @posts = scope.page(params[:page]).per(Spree::Post.per_page)
     end
 
@@ -50,6 +54,7 @@ module Spree
       ]
       @title = "#{@blog.name} tagged with '#{query}'"
       get_tags
+      @object = @blog
       render template: 'spree/posts/index'
     end
 

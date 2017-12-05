@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_essential_content'
-  s.version     = '3.2.0.3'
+  s.version     = '3.2.0.4'
   s.authors     = ["Spencer Steffen", "Nathan Lowrie"]
   s.email       = ["spencer@citrusme.com", "nate@finelineautomation.com"]
   s.homepage    = "https://github.com/FineLineAutomation/spree_essential_content"
@@ -20,10 +20,9 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'acts-as-taggable-on'
 
   s.add_dependency 'warden', '~> 1.2.5'
-  s.add_development_dependency 'rails', '~> 4.2'
+  s.add_development_dependency 'rails', '~> 5.0'
   s.add_development_dependency 'capybara', '~> 2.7'
   s.add_development_dependency 'coffee-rails'
-  s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'factory_girl', '~> 4.7'
   s.add_development_dependency 'ffaker'
   s.add_development_dependency 'rspec-rails',  '~> 3.4'
