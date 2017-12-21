@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_essential_content'
-  s.version     = '3.2.0.4'
+  s.version     = '3.2.0.5'
   s.authors     = ["Spencer Steffen", "Nathan Lowrie"]
   s.email       = ["spencer@citrusme.com", "nate@finelineautomation.com"]
   s.homepage    = "https://github.com/FineLineAutomation/spree_essential_content"
