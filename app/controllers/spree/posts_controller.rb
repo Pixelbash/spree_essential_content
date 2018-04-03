@@ -5,8 +5,8 @@ module Spree
     helper 'spree/blogs/posts'
     helper "spree/products"
 
-    before_filter :get_blog
-    before_filter :get_sidebar, only: [:index, :search, :show]
+    before_action :get_blog
+    before_action :get_sidebar, only: [:index, :search, :show]
 
     def index
       @posts_by_month = default_scope.web.limit(50).group_by { |post| post.posted_at.strftime("%B %Y") }

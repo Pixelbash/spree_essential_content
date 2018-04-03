@@ -1,5 +1,5 @@
 Spree::HomeController.class_eval do
-  before_filter :get_homepage
+  before_action :get_homepage
 
   helper 'spree/blogs/posts'
 

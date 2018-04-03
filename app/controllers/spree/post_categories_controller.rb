@@ -3,8 +3,8 @@ module Spree
 
     helper 'spree/blogs/posts'
 
-    before_filter :get_blog
-    before_filter :get_sidebar, only: [:index, :search, :show]
+    before_action :get_blog
+    before_action :get_sidebar, only: [:index, :search, :show]
 
     def show
       @category = Spree::PostCategory.find_by_permalink(params[:id])
